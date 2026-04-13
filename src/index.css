@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-pink: #E9608B;
+  --color-brand-teal: #3EB4B3;
+  --color-brand-purple: #735099;
+  --color-brand-dark: #2B5E66;
+  --color-brand-light: #F8FAFA;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-brand-light);
+  color: var(--color-brand-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes phone-scroll {
+  0%, 10% { transform: translateY(0); }
+  90%, 100% { transform: translateY(calc(-100% + 600px)); }
+}
+
+.animate-phone-scroll {
+  animation: phone-scroll 25s ease-in-out infinite alternate;
+}
+
+@keyframes scroll-down {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+.animate-scroll-down {
+  animation: scroll-down 20s linear infinite;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(43, 94, 102, 0.05);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-brand-pink), var(--color-brand-purple), var(--color-brand-teal));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient-brand {
+  background: linear-gradient(135deg, var(--color-brand-pink), var(--color-brand-purple), var(--color-brand-teal));
+}
+
+@keyframes autoScroll {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-60%); }
+  100% { transform: translateY(0); }
+}
+
+.animate-auto-scroll {
+  animation: autoScroll 25s ease-in-out infinite;
+}
