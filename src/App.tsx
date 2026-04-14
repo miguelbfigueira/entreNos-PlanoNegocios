@@ -9,7 +9,6 @@ import {
   Phone, Clock, Monitor, Cloud
 } from 'lucide-react';
 import { LandscapeChart } from './components/LandscapeChart';
-import { AISearch } from './components/AISearch';
 import { ExecutiveSummary } from './components/ExecutiveSummary';
 import { BackgroundMusic } from './components/BackgroundMusic';
 import { Financials } from './components/Financials';
@@ -210,62 +209,7 @@ const FlyerMockup = ({ type }: { type: number, key?: React.Key }) => {
   );
 };
 
-const LoginScreen = ({ onLogin }: { onLogin: (name: string, company: string) => void }) => {
-  const [name, setName] = useState('');
-  const [company, setCompany] = useState('');
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (name.trim() && company.trim()) {
-      onLogin(name, company);
-    }
-  };
-
-  return (
-    <div className="fixed inset-0 z-[100] bg-brand-light flex items-center justify-center p-4">
-      <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 max-w-md w-full text-center">
-        <div className="flex justify-center mb-6">
-          <NavLogo />
-        </div>
-        <h2 className="text-2xl md:text-3xl font-bold text-brand-dark mb-2">Bem-vindo ao Plano de Negócios do Projeto Entre Nós</h2>
-        <p className="text-brand-dark/70 mb-8">Por favor efetue o seu login como investidor</p>
-        
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <input 
-              type="text" 
-              placeholder="Nome" 
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-brand-pink focus:ring-2 focus:ring-brand-pink/20 transition-all"
-              required
-            />
-          </div>
-          <div>
-            <input 
-              type="text" 
-              placeholder="Empresa" 
-              value={company}
-              onChange={(e) => setCompany(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-brand-pink focus:ring-2 focus:ring-brand-pink/20 transition-all"
-              required
-            />
-          </div>
-          <button 
-            type="submit"
-            className="w-full py-4 rounded-xl bg-gradient-brand text-white font-bold text-lg hover:shadow-lg hover:shadow-brand-pink/30 transition-all transform hover:-translate-y-1 mt-4"
-          >
-            Entrar
-          </button>
-        </form>
-      </div>
-    </div>
-  );
-};
-
 export default function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [investorData, setInvestorData] = useState({ name: '', company: '' });
   const [showStory, setShowStory] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -282,11 +226,6 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleLogin = (name: string, company: string) => {
-    setInvestorData({ name, company });
-    setIsLoggedIn(true);
-  };
-
   const navLinks = [
     { id: 'home', name: 'Início', icon: <Home size={20} />, description: 'Visão geral e sumário executivo do projeto.' },
     { id: 'mercado', name: 'Mercado', icon: <Globe size={20} />, description: 'Análise do mercado, segmentação e oportunidade identificada.' },
@@ -297,10 +236,6 @@ export default function App() {
     { id: 'equipa', name: 'Equipa', icon: <Users size={20} />, description: 'Conheça os fundadores e a equipa por trás do projeto.' },
     { id: 'financas', name: 'Finanças', icon: <BarChart3 size={20} />, description: 'Projeções financeiras, métricas e necessidades de investimento.' },
   ];
-
-  if (!isLoggedIn) {
-    return <LoginScreen onLogin={handleLogin} />;
-  }
 
   return (
     <div className="min-h-screen font-sans selection:bg-brand-pink/30">
@@ -421,15 +356,6 @@ export default function App() {
               </motion.div>
             </div>
           </section>
-
-      {/* AI Search Section */}
-      <section className="pt-4 pb-12 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn>
-            <AISearch />
-          </FadeIn>
-        </div>
-      </section>
 
       {/* Chapter Navigation Cards - Horizontal Layout */}
       <section className="py-16 bg-gray-50 relative overflow-hidden">
