@@ -73,12 +73,13 @@ export const Financials = () => {
                     <div className="text-xl font-black text-brand-pink">{formatCurrency(cf0)}</div>
                   </div>
                   <div className="p-4 bg-gray-50 rounded-xl border border-gray-100">
-                    <div className="text-sm text-brand-dark/60 font-bold mb-1">Período 1 (Retorno)</div>
+                    <div className="text-sm text-brand-dark/60 font-bold mb-1">Valor de venda da Solução Chave-Na-Mão para o cliente principal</div>
                     <div className="text-xl font-black text-brand-teal">{formatCurrency(cf1)}</div>
                   </div>
                 </div>
 
                 <div className="bg-brand-teal/5 p-6 rounded-xl border border-brand-teal/20">
+                  <p className="text-sm text-brand-dark/70 mb-4 italic">Pode ajustar aqui a sua taxa de atualização e verificar o impacto no seu retorno</p>
                   <label className="flex justify-between text-sm font-bold text-brand-dark mb-4">
                     <span>Taxa de Actualização</span>
                     <span className="text-brand-teal text-lg">{discountRate}%</span>
@@ -86,7 +87,7 @@ export const Financials = () => {
                   <input 
                     type="range" 
                     min="1" 
-                    max="30" 
+                    max="100" 
                     step="0.5"
                     value={discountRate} 
                     onChange={(e) => setDiscountRate(parseFloat(e.target.value))}
@@ -94,7 +95,7 @@ export const Financials = () => {
                   />
                   <div className="flex justify-between text-xs text-brand-dark/40 mt-2 font-medium">
                     <span>1%</span>
-                    <span>30%</span>
+                    <span>100%</span>
                   </div>
                 </div>
               </div>
@@ -159,42 +160,6 @@ export const Financials = () => {
                   Recuperação total do investimento inicial no primeiro ano de operação comercial, garantindo liquidez e sustentabilidade.
                 </p>
               </div>
-            </div>
-          </FadeIn>
-        </div>
-
-        {/* Summary Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <FadeIn delay={0.2}>
-            <div className="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-brand-teal hover:shadow-md transition-shadow">
-              <div className="flex items-center justify-between mb-4">
-                <div className="text-sm font-bold text-brand-dark/60 uppercase tracking-wider">Custo Total Base</div>
-                <div className="p-2 bg-brand-teal/10 rounded-lg text-brand-teal"><Calculator size={20} /></div>
-              </div>
-              <div className="text-3xl font-black text-brand-dark">{formatCurrency(totalCost)}</div>
-              <div className="text-sm text-brand-dark/50 mt-2">Soma de RH e Materiais</div>
-            </div>
-          </FadeIn>
-
-          <FadeIn delay={0.2}>
-            <div className="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-brand-purple hover:shadow-md transition-shadow">
-              <div className="flex items-center justify-between mb-4">
-                <div className="text-sm font-bold text-brand-dark/60 uppercase tracking-wider">Margem de Contingência</div>
-                <div className="p-2 bg-brand-purple/10 rounded-lg text-brand-purple"><PieChart size={20} /></div>
-              </div>
-              <div className="text-3xl font-black text-brand-dark">10%</div>
-              <div className="text-sm text-brand-dark/50 mt-2">Para imprevistos e ajustes</div>
-            </div>
-          </FadeIn>
-
-          <FadeIn delay={0.3}>
-            <div className="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-brand-pink hover:shadow-md transition-shadow transform md:-translate-y-2">
-              <div className="flex items-center justify-between mb-4">
-                <div className="text-sm font-bold text-brand-dark/60 uppercase tracking-wider">Custo Final Estimado</div>
-                <div className="p-2 bg-brand-pink/10 rounded-lg text-brand-pink"><TrendingUp size={20} /></div>
-              </div>
-              <div className="text-4xl font-black text-brand-pink">{formatCurrency(finalCost)}</div>
-              <div className="text-sm text-brand-dark/50 mt-2 font-medium">Pronto para execução</div>
             </div>
           </FadeIn>
         </div>

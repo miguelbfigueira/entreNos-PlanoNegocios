@@ -37,6 +37,9 @@ export const ExecutiveSummary = () => {
     <div className="space-y-24">
       {/* The Story */}
       <FadeIn>
+        <div className="text-center mb-12">
+          <h3 className="text-3xl md:text-5xl font-black text-brand-dark tracking-tight uppercase">O DESAFIO</h3>
+        </div>
         <div className="relative bg-gradient-to-br from-brand-pink/10 via-brand-purple/5 to-brand-teal/10 rounded-[3rem] p-8 md:p-16 overflow-hidden border border-white/50 shadow-xl">
           <div className="absolute top-0 left-0 w-full h-2 bg-gradient-brand"></div>
           <div className="absolute -top-24 -right-24 w-64 h-64 bg-brand-pink/20 rounded-full blur-3xl"></div>
@@ -216,20 +219,42 @@ export const ExecutiveSummary = () => {
           <div className="md:w-2/3">
             <h4 className="text-3xl font-bold mb-6">Modelo de Negócio B2G – Solução Chave-na-Mão</h4>
             <p className="text-lg text-white/90 leading-relaxed mb-6">
-              Com um investimento inicial estimado de 127 622 euros e um período de retorno financeiro previsto de 12 meses, o Entre Nós posiciona-se como uma oportunidade estratégica para gerar impacto social mensurável aliado a sustentabilidade financeira. O projeto adota um modelo B2G (Business-to-Government), baseado na comercialização institucional da plataforma a entidades públicas do setor da saúde, tendo a Direção-Geral da Saúde como cliente estratégico prioritário.
+              O Entre Nós posiciona-se como uma solução digital inovadora de literacia em saúde sexual e afetos. Com um investimento inicial estimado de 127 622 euros, o projeto apresenta um Valor Atual Líquido (VAL) estimado em 99 650,73 euros, considerando uma taxa de atualização de 10% e um preço médio de 250 000 euros por implementação, prevendo-se um período de retorno do investimento (payback) de aproximadamente 12 meses.
+            </p>
+            <p className="text-base text-white/80 leading-relaxed mb-4">
+              O modelo de receita baseia-se na comercialização da solução enquanto pacote integrado - Solução Chave-Na-Mão, incluindo licenciamento da plataforma, implementação personalizada e contrato de manutenção de 2 anos. Esta abordagem permite gerar impacto direto em saúde pública, através da redução de custos associados a comportamentos de risco evitáveis, contribuindo para a otimização da utilização de recursos e melhoria de indicadores de saúde.
+            </p>
+            <p className="text-base text-white/80 leading-relaxed mb-4">
+              O modelo de negócio apresenta como mercado de entrada um segmento B2G (Business-to-Government), com foco estratégico em entidades públicas do setor da saúde e educação, permitindo uma implementação em larga escala, alinhada com políticas públicas e com elevado potencial de impacto populacional , tendo como cliente principal a Direcção Geral de Saúde (DGS). Este posicionamento assegura credibilidade institucional, validação científica e estabilidade contratual, constituindo o ponto de partida para a expansão do projeto.
             </p>
             <p className="text-base text-white/80 leading-relaxed">
-              Este modelo assegura receitas estáveis, previsibilidade contratual e elevado potencial de escala nacional e internacional (possível adaptação do modelo para países lusófonos). Enquanto solução digital integrada e chave-na-mão, o Entre Nós contribui para a melhoria da literacia em saúde sexual, promovendo a prevenção e reduzindo custos associados a situações evitáveis. Ao otimizar a utilização de recursos públicos e melhorar indicadores de saúde, o projeto gera valor económico e social sustentável, alinhado com as prioridades atuais dos sistemas de saúde e com oportunidades de financiamento público e institucional.
+              Paralelamente, o Entre Nós foi desenvolvido como uma solução modular e multi-stakeholder, permitindo a sua utilização futura em escolas, associações e empresas, reforçando o potencial de diversificação de receitas e crescimento sustentável.
             </p>
           </div>
-          <div className="md:w-1/3 flex justify-center">
-            <div className="w-48 h-48 bg-white/10 rounded-full flex items-center justify-center border-4 border-white/20 backdrop-blur-sm">
-              <div className="text-center">
+          <div className="md:w-1/3 flex flex-col gap-6 justify-center items-center">
+            <div className="w-48 h-48 bg-white/10 rounded-full flex items-center justify-center border-4 border-white/20 backdrop-blur-sm p-4 text-center">
+              <div>
                 <div className="text-4xl font-bold mb-2">B2G</div>
-                <div className="text-sm text-white/70 uppercase tracking-wider">Impacto &<br/>Sustentabilidade</div>
+                <div className="text-xs text-white/70 uppercase tracking-wider">Modelo de negócio de entrada no mercado</div>
+              </div>
+            </div>
+            <div className="w-48 h-48 bg-brand-teal/20 rounded-full flex items-center justify-center border-4 border-brand-teal/40 backdrop-blur-sm p-4 text-center">
+              <div>
+                <div className="text-3xl font-bold mb-2">B2B / B2C</div>
+                <div className="text-xs text-white/80 uppercase tracking-wider">Possibilidade de expansão do modelo de negócio</div>
               </div>
             </div>
           </div>
+        </div>
+      </FadeIn>
+
+      {/* Growth Strategy */}
+      <FadeIn>
+        <div className="bg-brand-teal/10 border border-brand-teal/20 rounded-[2rem] p-8 md:p-12 shadow-sm text-center max-w-4xl mx-auto">
+          <h4 className="text-2xl font-bold text-brand-dark mb-6">Estratégia de Crescimento</h4>
+          <p className="text-lg text-brand-dark/80 leading-relaxed">
+            A estratégia de crescimento assenta numa lógica faseada: (i) Proposta de venda inicial para a DGS (governamental) (B2G) (ii) expansão e adaptação do modelo da plataforma para clientes institucionais e (iii) escala internacional, com especial potencial de adaptação a países lusófonos. Neste contexto, o investimento no Entre Nós representa não apenas o desenvolvimento de uma plataforma digital, mas a criação de uma infraestrutura escalável de saúde preventiva, com elevado potencial de replicação e impacto económico e social sustentável.
+          </p>
         </div>
       </FadeIn>
 
