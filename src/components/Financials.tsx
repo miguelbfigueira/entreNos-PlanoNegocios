@@ -62,6 +62,12 @@ export const Financials = () => {
 
         {/* Análise de Investimento (VAL) */}
         <FadeIn delay={0.1}>
+          <div className="mb-8 bg-brand-dark/5 p-6 rounded-2xl border border-brand-dark/10 text-center max-w-4xl mx-auto">
+            <p className="text-brand-dark/80 font-medium leading-relaxed">
+              Estas projeções assumem um cenário de implementação institucional bem sucedida e têm como objetivo demonstrar a viabilidade económica do projeto, admitindo se cenários mais conservadores em fases iniciais de negociação e adoção.
+            </p>
+          </div>
+          
           <div className="mb-16 bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden p-8">
             <h3 className="text-2xl font-bold mb-6 text-brand-dark">Valor Atual Liquido (VAL)</h3>
             <div className="grid md:grid-cols-2 gap-12 items-center">

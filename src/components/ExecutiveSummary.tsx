@@ -217,7 +217,7 @@ export const ExecutiveSummary = () => {
       <FadeIn>
         <div className="bg-gradient-to-r from-brand-dark to-brand-purple text-white rounded-[2rem] p-8 md:p-12 shadow-xl flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-2/3">
-            <h4 className="text-3xl font-bold mb-6">Modelo de Negócio B2G – Solução Chave-na-Mão</h4>
+            <h4 className="text-3xl font-bold mb-6">Modelo de Negócio de entrada B2G – Solução Chave-na-Mão</h4>
             <p className="text-lg text-white/90 leading-relaxed mb-6">
               O Entre Nós posiciona-se como uma solução digital inovadora de literacia em saúde sexual e afetos. Com um investimento inicial estimado de 127 622 euros, o projeto apresenta um Valor Atual Líquido (VAL) estimado em 99 650,73 euros, considerando uma taxa de atualização de 10% e um preço médio de 250 000 euros por implementação, prevendo-se um período de retorno do investimento (payback) de aproximadamente 12 meses.
             </p>
@@ -227,8 +227,11 @@ export const ExecutiveSummary = () => {
             <p className="text-base text-white/80 leading-relaxed mb-4">
               O modelo de negócio apresenta como mercado de entrada um segmento B2G (Business-to-Government), com foco estratégico em entidades públicas do setor da saúde e educação, permitindo uma implementação em larga escala, alinhada com políticas públicas e com elevado potencial de impacto populacional , tendo como cliente principal a Direcção Geral de Saúde (DGS). Este posicionamento assegura credibilidade institucional, validação científica e estabilidade contratual, constituindo o ponto de partida para a expansão do projeto.
             </p>
-            <p className="text-base text-white/80 leading-relaxed">
+            <p className="text-base text-white/80 leading-relaxed mb-4">
               Paralelamente, o Entre Nós foi desenvolvido como uma solução modular e multi-stakeholder, permitindo a sua utilização futura em escolas, associações e empresas, reforçando o potencial de diversificação de receitas e crescimento sustentável.
+            </p>
+            <p className="text-base text-white/90 font-medium leading-relaxed bg-white/10 p-4 rounded-xl border border-white/20">
+              As projeções apresentadas baseiam-se em pressupostos conservadores e consideram um cenário de implementação faseada junto do cliente institucional.
             </p>
           </div>
           <div className="md:w-1/3 flex flex-col gap-6 justify-center items-center">
@@ -250,11 +253,55 @@ export const ExecutiveSummary = () => {
 
       {/* Growth Strategy */}
       <FadeIn>
-        <div className="bg-brand-teal/10 border border-brand-teal/20 rounded-[2rem] p-8 md:p-12 shadow-sm text-center max-w-4xl mx-auto">
-          <h4 className="text-2xl font-bold text-brand-dark mb-6">Estratégia de Crescimento</h4>
-          <p className="text-lg text-brand-dark/80 leading-relaxed">
-            A estratégia de crescimento assenta numa lógica faseada: (i) Proposta de venda inicial para a DGS (governamental) (B2G) (ii) expansão e adaptação do modelo da plataforma para clientes institucionais e (iii) escala internacional, com especial potencial de adaptação a países lusófonos. Neste contexto, o investimento no Entre Nós representa não apenas o desenvolvimento de uma plataforma digital, mas a criação de uma infraestrutura escalável de saúde preventiva, com elevado potencial de replicação e impacto económico e social sustentável.
-          </p>
+        <div className="bg-white border border-gray-100 rounded-[2rem] p-8 md:p-12 shadow-xl max-w-5xl mx-auto relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-brand-pink via-brand-purple to-brand-teal"></div>
+          <h4 className="text-3xl font-bold text-brand-dark mb-12 text-center">Estratégia de Crescimento</h4>
+          
+          <div className="relative">
+            {/* Connecting Line */}
+            <div className="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-brand-pink/30 via-brand-purple/30 to-brand-teal/30 -translate-y-1/2 z-0"></div>
+            
+            <div className="grid md:grid-cols-3 gap-8 relative z-10">
+              {/* Step 1 */}
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-brand-pink/20 flex flex-col items-center text-center relative group hover:-translate-y-2 transition-transform duration-300">
+                <div className="w-16 h-16 rounded-full bg-brand-pink/10 flex items-center justify-center text-brand-pink mb-4 border-4 border-white shadow-sm group-hover:scale-110 transition-transform">
+                  <span className="font-black text-xl">1</span>
+                </div>
+                <h5 className="font-bold text-brand-dark mb-3">Fase Inicial (B2G)</h5>
+                <p className="text-sm text-brand-dark/70 leading-relaxed">
+                  Proposta de venda inicial para a DGS (Governamental), estabelecendo a plataforma como solução oficial e ganhando credibilidade institucional.
+                </p>
+              </div>
+
+              {/* Step 2 */}
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-brand-purple/20 flex flex-col items-center text-center relative group hover:-translate-y-2 transition-transform duration-300">
+                <div className="w-16 h-16 rounded-full bg-brand-purple/10 flex items-center justify-center text-brand-purple mb-4 border-4 border-white shadow-sm group-hover:scale-110 transition-transform">
+                  <span className="font-black text-xl">2</span>
+                </div>
+                <h5 className="font-bold text-brand-dark mb-3">Expansão B2B/B2C</h5>
+                <p className="text-sm text-brand-dark/70 leading-relaxed">
+                  Expansão e adaptação do modelo da plataforma para outros clientes institucionais, escolas, associações e empresas.
+                </p>
+              </div>
+
+              {/* Step 3 */}
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-brand-teal/20 flex flex-col items-center text-center relative group hover:-translate-y-2 transition-transform duration-300">
+                <div className="w-16 h-16 rounded-full bg-brand-teal/10 flex items-center justify-center text-brand-teal mb-4 border-4 border-white shadow-sm group-hover:scale-110 transition-transform">
+                  <span className="font-black text-xl">3</span>
+                </div>
+                <h5 className="font-bold text-brand-dark mb-3">Escala Internacional</h5>
+                <p className="text-sm text-brand-dark/70 leading-relaxed">
+                  Internacionalização com especial potencial de adaptação a países lusófonos, criando uma infraestrutura escalável de saúde preventiva.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-10 text-center bg-brand-light/50 p-6 rounded-xl border border-brand-teal/10">
+            <p className="text-brand-dark/80 font-medium">
+              O investimento no Entre Nós representa não apenas o desenvolvimento de uma plataforma digital, mas a criação de uma infraestrutura escalável de saúde preventiva, com elevado potencial de replicação e impacto económico e social sustentável.
+            </p>
+          </div>
         </div>
       </FadeIn>
 

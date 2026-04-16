@@ -307,7 +307,7 @@ export default function App() {
       {activeChapter === 'home' && (
         <>
           {/* Hero Section */}
-          <section className="relative pt-32 pb-10 lg:pt-48 lg:pb-16 overflow-hidden">
+          <section className="relative pt-32 pb-4 lg:pt-48 lg:pb-8 overflow-hidden">
             {/* Background Blobs */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
               <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-brand-pink/10 blur-3xl mix-blend-multiply animate-pulse" style={{ animationDuration: '8s' }} />
@@ -353,80 +353,23 @@ export default function App() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="max-w-2xl mx-auto text-xl md:text-2xl text-brand-dark/70 mb-10 font-medium"
+                className="max-w-2xl mx-auto text-xl md:text-2xl text-brand-dark/70 mb-4 font-medium"
               >
-                A oportunidade de investir numa plataforma digital de literacia em saúde sexual que reduz custos para o SNS e cria um espaço seguro para os jovens.
+                Transformamos a literacia em saúde sexual dos jovens em impacto real para a saúde pública.
               </motion.p>
               
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                className="flex flex-col sm:flex-row justify-center items-center gap-4"
-              >
-                <button onClick={() => { setActiveChapter('sumario'); window.scrollTo(0, 0); }} className="px-8 py-4 rounded-full bg-gradient-brand text-white font-bold text-lg hover:shadow-lg hover:shadow-brand-pink/30 transition-all transform hover:-translate-y-1 flex items-center gap-2">
-                  Verifique o plano de negócios de forma resumida <ArrowRight size={20} />
-                </button>
-                <button onClick={() => { setActiveChapter('financas'); window.scrollTo(0, 0); }} className="px-8 py-4 rounded-full bg-white text-brand-dark font-bold text-lg border border-gray-200 hover:border-brand-teal hover:text-brand-teal transition-all">
-                  Ver análise financeira
-                </button>
-              </motion.div>
             </div>
           </section>
 
-      {/* Key Highlights Section */}
-      <section className="py-16 bg-white relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <FadeIn delay={0.1}>
-              <div className="bg-brand-light/50 p-8 rounded-[2rem] border border-brand-teal/20 h-full hover:shadow-xl transition-all">
-                <div className="w-14 h-14 bg-brand-teal/10 rounded-2xl flex items-center justify-center text-brand-teal mb-6">
-                  <Smartphone size={28} />
-                </div>
-                <h3 className="text-xl font-bold text-brand-dark mb-4">Qual o produto?</h3>
-                <p className="text-brand-dark/80 leading-relaxed">
-                  Plataforma digital interativa Entre Nós, destinada à promoção da literacia em saúde sexual e reprodutiva entre jovens, através de conteúdos educativos baseados em evidência científica e metodologias digitais inovadoras.
-                </p>
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.2}>
-              <div className="bg-brand-light/50 p-8 rounded-[2rem] border border-brand-purple/20 h-full hover:shadow-xl transition-all">
-                <div className="w-14 h-14 bg-brand-purple/10 rounded-2xl flex items-center justify-center text-brand-purple mb-6">
-                  <Globe size={28} />
-                </div>
-                <h3 className="text-xl font-bold text-brand-dark mb-4">Qual o principal cliente?</h3>
-                <p className="text-brand-dark/80 leading-relaxed">
-                  O Entre Nós assenta num modelo de negócio B2G (Business to Government), oferecendo uma solução chave-na-mão, tendo como principal cliente estratégico identificado a Direção-Geral da Saúde.
-                </p>
-              </div>
-            </FadeIn>
-          </div>
-          <FadeIn delay={0.3}>
-            <div className="bg-gradient-to-br from-brand-dark to-slate-900 p-8 md:p-12 rounded-[2rem] border border-brand-teal/20 hover:shadow-2xl transition-all text-white shadow-xl relative overflow-hidden max-w-4xl mx-auto">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-teal/10 rounded-full blur-3xl -mr-10 -mt-10"></div>
-              <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-brand-teal mb-6 relative z-10">
-                <TrendingUp size={28} />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4 relative z-10">Qual o investimento?</h3>
-              <p className="text-white/90 leading-relaxed relative z-10 text-sm md:text-base">
-                O modelo de receita assenta na comercialização da solução enquanto pacote integrado, incluindo licenciamento da plataforma, implementação personalizada e contrato de manutenção de 2 anos. Esta abordagem garante não só sustentabilidade financeira recorrente, como também impacto direto em saúde pública, através da redução de custos associados a comportamentos de risco evitáveis.<br/><br/>
-                O projeto prevê um investimento inicial estimado de 127 622 euros, com um Valor Atual Líquido (VAL) de 99 650,73 euros, considerando uma taxa de atualização de 10% e um preço de venda ao cliente de 250 000 euros por implementação.<br/><br/>
-                Com base nestas premissas, estima-se um período de retorno do investimento (payback) de aproximadamente 12 meses, refletindo um modelo financeiramente atrativo e escalável no setor da saúde digital.
-              </p>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
       {/* Chapter Navigation Cards - Horizontal Layout */}
-      <section className="py-16 bg-gray-50 relative overflow-hidden">
+      <section className="pt-8 pb-16 bg-gray-50 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-dark">O Nosso Caminho</h2>
               <p className="text-lg text-brand-dark/60">
-                Siga o nosso plano de negócios passo a passo para compreender a visão, a estratégia e o impacto do Entre Nós.
+                Explore o nosso plano de negócios, estruturado para demonstrar a viabilidade, o impacto e a sustentabilidade do projeto Entre Nós.
               </p>
             </div>
           </FadeIn>
@@ -460,6 +403,108 @@ export default function App() {
           </div>
         </div>
       </section>
+
+      {/* Key Highlights Section */}
+      <section className="py-16 bg-white relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-3 gap-8 mb-8">
+            {/* Produto */}
+            <FadeIn delay={0.1} className="lg:col-span-2">
+              <div className="group relative h-full overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-[#ffffff] to-[#f8f9fc] border border-brand-teal/20 p-8 md:p-12 shadow-lg hover:shadow-2xl transition-all duration-500">
+                <div className="absolute -right-20 -top-20 w-80 h-80 bg-brand-teal/5 rounded-full blur-3xl group-hover:bg-brand-teal/10 transition-colors duration-500"></div>
+                <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-brand-pink/5 rounded-full blur-3xl group-hover:bg-brand-pink/10 transition-colors duration-500"></div>
+                
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-brand-teal mb-8 shadow-sm border border-brand-teal/10 group-hover:scale-110 transition-transform duration-500">
+                    <Smartphone size={32} strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-3xl font-black text-brand-dark mb-6 tracking-tight">Qual o produto?</h3>
+                  <div className="text-brand-dark/80 leading-relaxed font-medium text-lg mb-6">
+                    O <span className="text-brand-pink font-bold">Entre Nós</span> é uma plataforma digital inovadora que combina uma micro-comunidade online, educação em saúde sexual e afetos baseada em evidência científica e apoio contínuo 24/7.
+                  </div>
+                  <div className="mt-auto pt-6 border-t border-brand-dark/5 text-brand-dark/60 text-sm leading-relaxed space-y-4">
+                    <p>Através do Entre Nós, os adolescentes e jovens têm acesso a informação validada através de conteúdos supervisionados por profissionais de saúde e a respostas em tempo real, asseguradas por um sistema de inteligência artificial com fact checking clínico ou por profissionais especializados.</p>
+                    <p>A plataforma combina conteúdos validados cientificamente com ferramentas digitais interativas, permitindo uma aprendizagem segura, personalizada e adaptada ao contexto juvenil atual.</p>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Cliente */}
+            <FadeIn delay={0.2} className="lg:col-span-1">
+              <div className="group relative h-full overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-brand-purple to-[#4c2b6f] border border-brand-purple/30 p-8 md:p-12 shadow-lg hover:shadow-2xl transition-all duration-500 text-white flex flex-col justify-between">
+                <div className="absolute top-0 right-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+                <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-pink/30 rounded-full blur-2xl group-hover:bg-brand-pink/40 transition-colors duration-500"></div>
+                
+                <div className="relative z-10">
+                  <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center text-white mb-8 border border-white/20 group-hover:scale-110 transition-transform duration-500">
+                    <Globe size={32} strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-3xl font-black mb-6 tracking-tight">Qual o principal cliente?</h3>
+                </div>
+                
+                <div className="relative z-10">
+                  <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-4 py-2 rounded-xl mb-6 font-bold text-sm">
+                    <span className="text-white">Modelo Inicial</span>
+                    <span className="bg-brand-pink text-white px-2 py-0.5 rounded-md text-xs">B2G</span>
+                  </div>
+                  <p className="text-white/80 leading-relaxed font-medium">
+                    Oferecemos uma solução digital integrada às entidades públicas, com a Direção Geral da Saúde identificada como cliente estratégico inicial, e potencial de escalabilidade para outros organismos do setor da saúde e educação.
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+          
+          <FadeIn delay={0.3}>
+            <div className="group relative overflow-hidden rounded-[2.5rem] bg-gradient-to-tr from-[#1a2538] via-brand-dark to-[#0f172a] border border-brand-teal/20 p-8 md:p-14 shadow-xl hover:shadow-2xl transition-all duration-500 w-full mb-8">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-brand-teal/10 to-brand-purple/10 outline-none rounded-full blur-3xl group-hover:scale-110 transition-transform duration-1000"></div>
+              
+              <div className="relative z-10 flex flex-col md:flex-row gap-12 items-center">
+                <div className="w-full md:w-1/3 flex flex-col items-center md:items-start text-center md:text-left">
+                  <div className="w-20 h-20 bg-gradient-to-br from-brand-teal to-brand-purple rounded-[1.5rem] flex items-center justify-center text-white mb-8 shadow-xl group-hover:-translate-y-2 transition-transform duration-500">
+                    <TrendingUp size={40} strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-3xl lg:text-4xl font-black text-white tracking-tight mb-4">Qual o investimento?</h3>
+                  <p className="text-white/70 font-medium">
+                    O modelo de receita assenta na comercialização da solução enquanto pacote integrado.
+                  </p>
+                </div>
+                
+                <div className="w-full md:w-2/3 flex flex-col md:border-l border-white/10 md:pl-12">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                    <div className="bg-white/5 backdrop-blur-sm p-5 rounded-2xl shadow-sm border border-white/10 flex flex-col items-start gap-4">
+                      <div className="w-10 h-10 rounded-full bg-brand-pink/20 flex items-center justify-center text-brand-pink shrink-0"><CheckCircle2 size={24} strokeWidth={2}/></div>
+                      <span className="font-bold text-sm text-white leading-tight">Licenciamento da plataforma</span>
+                    </div>
+                    <div className="bg-white/5 backdrop-blur-sm p-5 rounded-2xl shadow-sm border border-white/10 flex flex-col items-start gap-4">
+                      <div className="w-10 h-10 rounded-full bg-brand-purple/20 flex items-center justify-center text-[#d1b3ff] shrink-0"><CheckCircle2 size={24} strokeWidth={2}/></div>
+                      <span className="font-bold text-sm text-white leading-tight">Implementação personalizada</span>
+                    </div>
+                    <div className="bg-white/5 backdrop-blur-sm p-5 rounded-2xl shadow-sm border border-white/10 flex flex-col items-start gap-4">
+                      <div className="w-10 h-10 rounded-full bg-brand-teal/20 flex items-center justify-center text-brand-teal shrink-0"><CheckCircle2 size={24} strokeWidth={2}/></div>
+                      <span className="font-bold text-sm text-white leading-tight">Manutenção <br/>(2 anos)</span>
+                    </div>
+                  </div>
+                  <div className="space-y-4 text-white/70 leading-relaxed text-sm">
+                    <p>
+                      Esta abordagem garante não só sustentabilidade financeira recorrente, como também impacto direto em saúde pública, através da redução de custos associados a comportamentos de risco evitáveis.
+                    </p>
+                    <p>
+                      O projeto prevê um investimento inicial estimado de <span className="text-white font-bold">127 622 euros</span>, com um Valor Atual Líquido (VAL) de <span className="text-brand-teal font-bold">99 650,73 euros</span>, considerando uma taxa de atualização de 10% e um preço de venda ao cliente de <span className="text-brand-pink font-bold">250 000 euros</span> por implementação.
+                    </p>
+                    <p>
+                      Com base nestas premissas, estima-se um período de retorno do investimento (payback) de aproximadamente <span className="text-white font-bold">12 meses</span>, refletindo um modelo financeiramente atrativo e escalável no setor da saúde digital. As projeções apresentadas baseiam-se em pressupostos conservadores e consideram um cenário de implementação faseada junto do cliente institucional.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+
       </>
       )}
 
@@ -520,7 +565,7 @@ export default function App() {
                     <h4 className="text-xl font-bold text-brand-dark">Criação do Landscape Digital</h4>
                   </div>
                   <p className="text-brand-dark/80 leading-relaxed relative z-10">
-                    Através da análise efetuada em trabalho de design thinking, bem como trabalho de investigação e de análise de mercado efetuado foi possível verificar a Landscape digital e construir assim um mapa de escala de credibilidade e Interação, através das opções de mercado disponíveis.
+                    Através da análise efetuada pela equipa através do trabalho de design thinking, bem como através do trabalho de investigação e de análise de mercado efetuado foi possível verificar a Landscape digital e construir assim um mapa de escala de credibilidade e Interação, através das opções de mercado disponíveis.
                   </p>
                 </div>
 
@@ -529,7 +574,7 @@ export default function App() {
                   <div className="absolute top-0 right-0 w-32 h-32 bg-brand-purple/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
                   <div className="flex items-center gap-4 mb-6 relative z-10">
                     <div className="w-12 h-12 rounded-full bg-brand-purple/10 flex items-center justify-center text-brand-purple font-bold text-xl shrink-0">2</div>
-                    <h4 className="text-xl font-bold text-brand-dark">Principais concorrentes</h4>
+                    <h4 className="text-xl font-bold text-brand-dark">Principais Concorrentes</h4>
                   </div>
                   <p className="text-brand-dark/80 leading-relaxed relative z-10">
                     Identificação dos principais concorrentes do Projeto Entre Nós considerando a identitificação do público-alvo – Jovens portugueses entre os 14 e os 30 anos.
@@ -552,7 +597,7 @@ export default function App() {
                 </p>
                 <div className="bg-brand-pink/10 p-6 md:p-8 rounded-2xl border border-brand-pink/20 mt-8">
                   <p className="text-brand-dark font-medium text-lg leading-relaxed">
-                    Em síntese, o mapa evidencia que o aumento da interação nem sempre corresponde a um aumento da credibilidade, reforçando a importância de promover literacia digital e em saúde, bem como de valorizar plataformas que consigam equilibrar informação fiável com formatos acessíveis, interativos e adaptados às vivências dos jovens.
+                    Em síntese, o mapa evidencia que o aumento da interação nem sempre corresponde a um aumento da credibilidade, o que reforça a necessidade de plataformas que integrem literacia digital e literacia em saúde num único ecossistema seguro.
                   </p>
                 </div>
                 
@@ -658,12 +703,24 @@ export default function App() {
                         <p className="text-base font-bold text-brand-dark mb-2">Ferramenta Interativa</p>
                         <p className="text-sm font-medium text-brand-dark/70 flex items-start gap-3">
                           <Clock size={16} className="text-brand-purple shrink-0 mt-0.5" /> 
-                          <span>"Coloca aqui as tuas dúvidas" - 24h por dia, todos os dias (tempo reduzido de latência). Para encontrar esta ferramenta deve clicar-se abaixo onde diz "pergunta" e seguir as indicações dadas.</span>
+                          <span>"Coloca aqui as tuas dúvidas" - 24h por dia, todos os dias (tempo reduzido de latência).</span>
+                        </p>
+                      </div>
+                      <div className="bg-red-50 p-3 rounded-lg border border-red-100 mt-4">
+                        <p className="text-sm font-medium text-red-600 flex items-start gap-2">
+                          <AlertTriangle size={16} className="shrink-0 mt-0.5" /> 
+                          <span>Não permite a criação de um fórum de comunidade-online nem apresenta uma resposta por AI Fact-Checking com validação clinica</span>
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
+
+              <div className="mt-8 bg-brand-light/50 p-6 md:p-8 rounded-2xl border border-brand-teal/20">
+                <p className="text-brand-dark/80 font-medium text-lg leading-relaxed text-center">
+                  Embora estas soluções desempenhem um papel relevante na educação e aconselhamento em saúde sexual, apresentam limitações comuns: funcionam de forma isolada, não promovem comunidade entre utilizadores, têm horários de acesso restritos e não integram de forma contínua conteúdos educativos, interação entre pares e apoio profissional num único espaço digital.
+                </p>
               </div>
             </div>
           </FadeIn>
@@ -881,7 +938,7 @@ export default function App() {
                   </div>
                   <h3 className="text-2xl font-bold mb-4 relative z-10 text-brand-dark">Sistema Híbrido (IA + Humanos)</h3>
                   <p className="text-brand-dark/70 leading-relaxed flex-1 text-lg font-medium relative z-10">
-                    A proposta de valor é reforçada pela integração de um sistema híbrido que combina inteligência artificial (<strong>AI Fact Check</strong>) com moderação por profissionais de saúde. Analisa automaticamente conteúdos, sinalizando desinformação, funcionando como triagem que complementa a intervenção humana.
+                    A proposta de valor é reforçada pela integração de um sistema híbrido que combina inteligência artificial (<strong>AI Fact Check</strong>) com moderação por profissionais de saúde. Analisa automaticamente conteúdos, sinalizando desinformação, funcionando como um sistema de triagem que complementa e otimiza a intervenção humana.
                   </p>
                 </div>
               </div>
@@ -1087,7 +1144,7 @@ export default function App() {
             <div className="text-center max-w-4xl mx-auto mb-20">
               <h2 className="text-4xl md:text-6xl font-black mb-8 tracking-tight">O Produto</h2>
               <p className="text-2xl md:text-3xl text-brand-dark font-bold leading-tight">
-                “A ENTRE NÓS não vende apenas uma plataforma digital; vendemos um Ecossistema de Confiança e Literacia em Saúde Sexual.”
+                “O Entre Nós não se limita à disponibilização de uma plataforma digital. O Entre Nós constitui um ecossistema de confiança e literacia em saúde sexual.”
               </p>
             </div>
           </FadeIn>
@@ -1110,7 +1167,7 @@ export default function App() {
                   <div className="bg-gradient-to-br from-brand-teal to-brand-dark w-20 h-20 rounded-2xl flex items-center justify-center mb-8 text-white shadow-lg transform group-hover:-translate-y-2 transition-transform duration-300">
                     <Target size={40} />
                   </div>
-                  <h4 className="text-3xl font-black mb-4 text-brand-dark">Para os clientes <span className="text-brand-teal block text-xl mt-1">(B2G)</span></h4>
+                  <h4 className="text-3xl font-black mb-4 text-brand-dark">Para os Clientes</h4>
                   <p className="text-brand-dark/70 text-lg leading-relaxed relative z-10">Dados analíticos (anonimizados) sobre as preocupações da juventude, um canal de intervenção direta para entidades de saúde e uma ferramenta de cumprimento de metas de saúde pública.</p>
                 </div>
               </div>
@@ -1212,7 +1269,7 @@ export default function App() {
                   {[
                     { title: "Prova de Conceito", desc: "Validação do algoritmo de moderação via IA (Gemini).", com: "Não", color: "bg-gray-300" },
                     { title: "Protótipo", desc: "Interface funcional (UI/UX) com navegação. Testes de usabilidade.", com: "Não", color: "bg-gray-400" },
-                    { title: "MVP", desc: "Lançamento da Biblioteca, Fórum funcional e triagem básica.", com: "Pilotos B2B", color: "bg-brand-teal" },
+                    { title: "MVP", desc: "Lançamento da Biblioteca, Fórum funcional e triagem básica.", com: "Pilotos B2G (Fase de entrada inicial)", color: "bg-brand-teal" },
                     { title: "Produto Completo", desc: "Integração total com SNS, app nativa e rede de especialistas.", com: "Pleno", color: "bg-brand-pink" },
                     { title: "Futuro", desc: "Gamificação, teleconsultas e expansão para mercados lusófonos.", com: "Expansão", color: "bg-brand-purple" }
                   ].map((fase, i) => (
@@ -1348,67 +1405,109 @@ export default function App() {
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Como iremos comercializar o Entre Nós?</h2>
               <p className="text-lg text-white/70 mb-8">O Entre Nós adota um modelo de negócio de entrada B2G (Business-to-Government) com Solução chave na mão, com venda institucional da plataforma digital a entidades públicas de saúde, identificando a Direção Geral de Saúde como principal cliente.</p>
+            </div>
               
-              <div className="bg-white rounded-2xl p-8 text-left shadow-2xl border-l-8 border-brand-teal mb-8 transform hover:-translate-y-1 transition-transform">
-                <h3 className="text-2xl font-bold text-brand-teal mb-4">Foco inicial em B2G: mercado de entrada estratégico</h3>
-                <p className="text-brand-dark/90 leading-relaxed mb-4">
-                  O posicionamento inicial no modelo B2G resulta de três fatores principais: 1. Escalabilidade nacional rápida, permitindo implementação em larga escala através dos sistemas públicos de saúde e educação 2. Alinhamento com políticas públicas, dado que a literacia em saúde sexual constitui uma prioridade estratégica em saúde pública.
-                </p>
-                <p className="text-brand-dark/90 leading-relaxed mb-4">
-                  Neste contexto, entidades públicas como a Direção-Geral da Saúde assumem-se como clientes estratégicos prioritários, assegurando uma fonte de receita estável com previsibilidade contratual.
-                </p>
-                <p className="text-brand-dark/90 leading-relaxed font-medium">
-                  Importa sublinhar que o modelo B2G não é exclusivo, mas sim o ponto de entrada estratégico, permitindo validação científica, credibilidade institucional e geração de impacto populacional.
-                </p>
+            <div className="grid md:grid-cols-2 gap-8 mb-16">
+                <div className="bg-white rounded-2xl p-8 text-left shadow-2xl border-l-8 border-brand-teal transform hover:-translate-y-1 transition-transform h-full flex flex-col">
+                  <h3 className="text-2xl font-bold text-brand-teal mb-4">Foco inicial em B2G: mercado de entrada estratégico</h3>
+                  <p className="text-brand-dark/90 leading-relaxed mb-4">
+                    O posicionamento inicial no modelo B2G resulta de dois fatores principais:
+                  </p>
+                  <ul className="space-y-3 mb-6">
+                    <li className="flex gap-3 text-brand-dark/90"><CheckCircle2 className="text-brand-teal shrink-0 mt-1" size={20} /> <span><strong>1. Escalabilidade nacional rápida</strong>, permitindo implementação em larga escala através dos sistemas públicos de saúde e educação.</span></li>
+                    <li className="flex gap-3 text-brand-dark/90"><CheckCircle2 className="text-brand-teal shrink-0 mt-1" size={20} /> <span><strong>2. Alinhamento com políticas públicas</strong>, dado que a literacia em saúde sexual constitui uma prioridade estratégica em saúde pública.</span></li>
+                  </ul>
+                  <p className="text-brand-dark/90 leading-relaxed mb-4">
+                    Neste contexto, entidades públicas como a Direção-Geral da Saúde assumem-se como clientes estratégicos prioritários, assegurando uma fonte de receita estável com previsibilidade contratual.
+                  </p>
+                  <p className="text-brand-dark/90 leading-relaxed font-medium mt-auto">
+                    Importa sublinhar que o modelo B2G não é exclusivo, mas sim o ponto de entrada estratégico, permitindo validação científica, credibilidade institucional e geração de impacto populacional.
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-2xl p-8 text-left shadow-2xl border-l-8 border-brand-purple transform hover:-translate-y-1 transition-transform h-full flex flex-col">
+                  <h3 className="text-2xl font-bold text-brand-purple mb-4">Plataforma multi-stakeholder e não exclusiva ao Estado</h3>
+                  <p className="text-brand-dark/90 leading-relaxed mb-4">
+                    Embora o lançamento inicial esteja orientado para o setor público, a plataforma foi concebida desde a origem como uma solução modular e adaptável a múltiplos contextos institucionais, incluindo:
+                  </p>
+                  <ul className="space-y-3 mb-6">
+                    <li className="flex gap-3 text-brand-dark/90"><CheckCircle2 className="text-brand-purple shrink-0 mt-1" size={20} /> <span><strong>Escolas e instituições de ensino</strong>, através de programas estruturados de educação sexual</span></li>
+                    <li className="flex gap-3 text-brand-dark/90"><CheckCircle2 className="text-brand-purple shrink-0 mt-1" size={20} /> <span><strong>Hospitais e unidades de saúde</strong>, como ferramenta de apoio à consulta e educação do paciente</span></li>
+                    <li className="flex gap-3 text-brand-dark/90"><CheckCircle2 className="text-brand-purple shrink-0 mt-1" size={20} /> <span><strong>Associações de doentes e ONG's</strong>, para apoio comunitário e programas educativos</span></li>
+                    <li className="flex gap-3 text-brand-dark/90"><CheckCircle2 className="text-brand-purple shrink-0 mt-1" size={20} /> <span><strong>Clínicas privadas e seguradoras</strong>, através de programas de prevenção e literacia em saúde</span></li>
+                    <li className="flex gap-3 text-brand-dark/90"><CheckCircle2 className="text-brand-purple shrink-0 mt-1" size={20} /> <span><strong>Empresas</strong>, no âmbito de programas de wellbeing e saúde ocupacional</span></li>
+                  </ul>
+                  <p className="text-brand-dark/90 leading-relaxed font-medium mt-auto">
+                    Esta versatilidade transforma o Entre Nós numa solução multi-stakeholder, capaz de gerar valor em diferentes contextos institucionais utilizando o mesmo núcleo tecnológico.
+                  </p>
+                </div>
               </div>
 
-              <div className="bg-white rounded-2xl p-8 text-left shadow-2xl border-l-8 border-brand-purple mb-8 transform hover:-translate-y-1 transition-transform">
-                <h3 className="text-2xl font-bold text-brand-purple mb-4">Plataforma multi-stakeholder e não exclusiva ao Estado</h3>
-                <p className="text-brand-dark/90 leading-relaxed mb-4">
-                  Embora o lançamento inicial esteja orientado para o setor público, a plataforma foi concebida desde a origem como uma solução modular e adaptável a múltiplos contextos institucionais, incluindo:
+              <div className="bg-white rounded-2xl p-8 md:p-12 text-left shadow-2xl border-t-8 border-brand-pink mb-16">
+                <h3 className="text-2xl md:text-3xl font-bold text-brand-dark mb-8 text-center">Lógica de crescimento: modelo coerente e escalável</h3>
+                <p className="text-brand-dark/80 text-lg leading-relaxed mb-10 text-center max-w-3xl mx-auto">
+                  O crescimento do Entre Nós segue uma lógica estruturada em três fases distintas, garantindo uma expansão sustentável e de impacto crescente:
                 </p>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex gap-3 text-brand-dark/90"><CheckCircle2 className="text-brand-purple shrink-0 mt-1" size={20} /> <span><strong>Escolas e instituições de ensino</strong>, através de programas estruturados de educação sexual</span></li>
-                  <li className="flex gap-3 text-brand-dark/90"><CheckCircle2 className="text-brand-purple shrink-0 mt-1" size={20} /> <span><strong>Hospitais e unidades de saúde</strong>, como ferramenta de apoio à consulta e educação do paciente</span></li>
-                  <li className="flex gap-3 text-brand-dark/90"><CheckCircle2 className="text-brand-purple shrink-0 mt-1" size={20} /> <span><strong>Associações de doentes e ONG's</strong>, para apoio comunitário e programas educativos</span></li>
-                  <li className="flex gap-3 text-brand-dark/90"><CheckCircle2 className="text-brand-purple shrink-0 mt-1" size={20} /> <span><strong>Clínicas privadas e seguradoras</strong>, através de programas de prevenção e literacia em saúde</span></li>
-                  <li className="flex gap-3 text-brand-dark/90"><CheckCircle2 className="text-brand-purple shrink-0 mt-1" size={20} /> <span><strong>Empresas</strong>, no âmbito de programas de wellbeing e saúde ocupacional</span></li>
-                </ul>
-                <p className="text-brand-dark/90 leading-relaxed font-medium">
-                  Esta versatilidade transforma o Entre Nós numa solução multi-stakeholder, capaz de gerar valor em diferentes contextos institucionais utilizando o mesmo núcleo tecnológico.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-2xl p-8 text-left shadow-2xl border-l-8 border-brand-pink transform hover:-translate-y-1 transition-transform">
-                <h3 className="text-2xl font-bold text-brand-pink mb-4">Lógica de crescimento: modelo coerente e escalável</h3>
-                <p className="text-brand-dark/90 leading-relaxed mb-6">
-                  O crescimento do Entre Nós segue uma lógica estruturada em três fases:
-                </p>
-                <div className="space-y-4 mb-6">
-                  <div className="bg-brand-light/50 p-6 rounded-xl border border-brand-dark/5">
-                    <h4 className="text-xl font-bold text-brand-dark mb-2">Fase 1 – Validação e impacto (B2G)</h4>
-                    <p className="text-brand-dark/80">Venda da solução de Implementação para instituições públicas como a DGS.</p>
+                
+                <div className="grid md:grid-cols-3 gap-6 mb-10">
+                  <div className="bg-brand-light/30 p-8 rounded-2xl border border-brand-teal/20 relative overflow-hidden group hover:shadow-lg transition-all">
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-brand-teal/10 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+                    <div className="w-12 h-12 bg-brand-teal/20 rounded-xl flex items-center justify-center text-brand-teal font-bold text-xl mb-6 relative z-10">1</div>
+                    <h4 className="text-xl font-bold text-brand-dark mb-3 relative z-10">Fase 1 – Validação e impacto (B2G)</h4>
+                    <p className="text-brand-dark/70 relative z-10">Venda da solução de Implementação para instituições públicas como a DGS.</p>
                   </div>
-                  <div className="bg-brand-light/50 p-6 rounded-xl border border-brand-dark/5">
-                    <h4 className="text-xl font-bold text-brand-dark mb-2">Fase 2 – Diversificação (B2B / B2B2C)</h4>
-                    <p className="text-brand-dark/80">Expansão e adaptação do modelo para hospitais privados, escolas, ONG's, seguradoras e empresas.</p>
+                  
+                  <div className="bg-brand-light/30 p-8 rounded-2xl border border-brand-purple/20 relative overflow-hidden group hover:shadow-lg transition-all">
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-brand-purple/10 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+                    <div className="w-12 h-12 bg-brand-purple/20 rounded-xl flex items-center justify-center text-brand-purple font-bold text-xl mb-6 relative z-10">2</div>
+                    <h4 className="text-xl font-bold text-brand-dark mb-3 relative z-10">Fase 2 – Diversificação (B2B / B2C)</h4>
+                    <p className="text-brand-dark/70 relative z-10">Expansão e adaptação do modelo para hospitais privados, escolas, ONG's, seguradoras e empresas.</p>
                   </div>
-                  <div className="bg-brand-light/50 p-6 rounded-xl border border-brand-dark/5">
-                    <h4 className="text-xl font-bold text-brand-dark mb-2">Fase 3 – Escala internacional</h4>
-                    <p className="text-brand-dark/80">Adaptação da plataforma para outros países, com particular enfoque em mercados lusófonos e em novos contextos de saúde preventiva.</p>
+                  
+                  <div className="bg-brand-light/30 p-8 rounded-2xl border border-brand-pink/20 relative overflow-hidden group hover:shadow-lg transition-all">
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-brand-pink/10 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+                    <div className="w-12 h-12 bg-brand-pink/20 rounded-xl flex items-center justify-center text-brand-pink font-bold text-xl mb-6 relative z-10">3</div>
+                    <h4 className="text-xl font-bold text-brand-dark mb-3 relative z-10">Fase 3 – Escala internacional</h4>
+                    <p className="text-brand-dark/70 relative z-10">Adaptação da plataforma para outros países, com particular enfoque em mercados lusófonos e em novos contextos de saúde preventiva.</p>
                   </div>
                 </div>
-                <div className="bg-brand-dark/5 p-4 rounded-xl border border-brand-dark/10 text-center">
-                  <p className="text-brand-dark font-bold leading-relaxed">
+                
+                <div className="bg-brand-dark/5 p-5 rounded-xl border border-brand-dark/10 flex items-start gap-4">
+                  <div className="text-brand-pink shrink-0 mt-1"><AlertTriangle size={20} /></div>
+                  <p className="text-brand-dark font-medium leading-relaxed">
                     O presente plano de negócio considera apenas a Fase 1 com desenvolvimento e implementação da plataforma Entre Nós e Venda para a Direção Geral de Saúde.
                   </p>
                 </div>
+              </div>
+          </FadeIn>
+
+          {/* Processo Comercial */}
+          <FadeIn delay={0.1}>
+            <h3 className="text-2xl font-bold mb-12 text-center">Processo Comercial</h3>
+            <div className="relative max-w-5xl mx-auto mb-24">
+              <div className="hidden md:block absolute top-8 left-10 right-10 h-1 bg-white/10 rounded-full"></div>
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+                {[
+                  { step: "Contacto", desc: "Apresentações à DGS e workshops de demonstração.", icon: <MessageCircle size={24}/> },
+                  { step: "Oportunidade", desc: "Mostrar o impacto na saúde pública, bem como poupança para o SNS.", icon: <PieChart size={24}/> },
+                  { step: "Proposta", desc: "Entrega de proposta com funcionalidades e custos.", icon: <Target size={24}/> },
+                  { step: "Negociação", desc: "Ajustes e alinhamento com políticas públicas.", icon: <Users size={24}/> },
+                  { step: "Concretização", desc: "Contrato formal e plano de implementação.", icon: <CheckCircle2 size={24}/> }
+                ].map((item, i) => (
+                  <div key={i} className="relative z-10 flex flex-col items-center text-center group">
+                    <div className="w-16 h-16 rounded-full bg-brand-dark border-4 border-brand-teal text-brand-teal flex items-center justify-center mb-4 shadow-[0_0_15px_rgba(62,180,179,0.2)] group-hover:scale-110 group-hover:bg-brand-teal group-hover:text-white transition-all duration-300">
+                      {item.icon}
+                    </div>
+                    <h4 className="font-bold text-lg mb-2 text-white">{item.step}</h4>
+                    <p className="text-sm text-white/60">{item.desc}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </FadeIn>
 
           {/* Ecossistema */}
-          <FadeIn delay={0.1}>
+          <FadeIn delay={0.2}>
             <div className="bg-white text-brand-dark rounded-3xl p-8 md:p-12 mb-16 shadow-2xl">
               <h3 className="text-2xl font-bold mb-10 text-center">Ecossistema de Implementação & Crescimento</h3>
               <div className="flex flex-col md:flex-row justify-between items-stretch gap-6">
@@ -1422,7 +1521,7 @@ export default function App() {
                 <div className="flex-1 w-full text-center p-6 bg-brand-light rounded-2xl border-2 border-brand-purple/20 hover:border-brand-purple transition-colors flex flex-col">
                   <div className="w-16 h-16 mx-auto bg-brand-purple/10 rounded-full flex items-center justify-center mb-4 text-brand-purple"><Users size={32} /></div>
                   <h4 className="font-bold text-xl mb-2">Equipa Entre Nós</h4>
-                  <p className="text-sm text-brand-dark/70 font-medium mb-4">Operação & Manutenção</p>
+                  <p className="text-sm text-brand-dark/70 font-medium mb-4">Contrato de implementação, operação e 2 anos de Manutenção</p>
                   <p className="text-xs text-brand-dark/50 mt-auto">Garante a segurança, moderação híbrida (IA + Humana) e evolução tecnológica.</p>
                 </div>
                 <div className="hidden md:flex items-center text-brand-purple"><ArrowRight size={32} /></div>
@@ -1430,33 +1529,8 @@ export default function App() {
                   <div className="w-16 h-16 mx-auto bg-brand-pink/10 rounded-full flex items-center justify-center mb-4 text-brand-pink"><Share2 size={32} /></div>
                   <h4 className="font-bold text-xl mb-2">Parceiros & Utilizadores</h4>
                   <p className="text-sm text-brand-dark/70 font-medium mb-4">ONGs, Escolas & Jovens</p>
-                  <p className="text-xs text-brand-dark/50 mt-auto">Parceiros ajudam na distribuição e criação de conteúdo. Jovens usam a plataforma gratuitamente.</p>
+                  <p className="text-xs text-brand-dark/50 mt-auto">Uma plataforma adaptável a diferentes parceiros e utilizadores.</p>
                 </div>
-              </div>
-            </div>
-          </FadeIn>
-
-          {/* Processo Comercial */}
-          <FadeIn delay={0.2}>
-            <h3 className="text-2xl font-bold mb-12 text-center">Processo Comercial</h3>
-            <div className="relative max-w-5xl mx-auto mb-24">
-              <div className="hidden md:block absolute top-8 left-10 right-10 h-1 bg-white/10 rounded-full"></div>
-              <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-                {[
-                  { step: "Contacto", desc: "Apresentações à DGS e workshops de demonstração.", icon: <MessageCircle size={24}/> },
-                  { step: "Oportunidade", desc: "Mostrar impacto: poupança de 250-650 mil €/ano.", icon: <PieChart size={24}/> },
-                  { step: "Proposta", desc: "Entrega de proposta com funcionalidades e custos.", icon: <Target size={24}/> },
-                  { step: "Negociação", desc: "Ajustes e alinhamento com políticas públicas.", icon: <Users size={24}/> },
-                  { step: "Concretização", desc: "Contrato formal e plano de implementação.", icon: <CheckCircle2 size={24}/> }
-                ].map((item, i) => (
-                  <div key={i} className="relative z-10 flex flex-col items-center text-center group">
-                    <div className="w-16 h-16 rounded-full bg-brand-dark border-4 border-brand-teal text-brand-teal flex items-center justify-center mb-4 shadow-[0_0_15px_rgba(62,180,179,0.2)] group-hover:scale-110 group-hover:bg-brand-teal group-hover:text-white transition-all duration-300">
-                      {item.icon}
-                    </div>
-                    <h4 className="font-bold text-lg mb-2 text-white">{item.step}</h4>
-                    <p className="text-sm text-white/60">{item.desc}</p>
-                  </div>
-                ))}
               </div>
             </div>
           </FadeIn>
@@ -1631,7 +1705,7 @@ export default function App() {
                   { month: "5", phase: "Lançamento Piloto", milestone: "Implementação em ambiente controlado (ex: uma escola secundária ou associação juvenil) para recolha de feedback real.", color: "bg-brand-purple" },
                   { month: "6", phase: "Go-to-Market (MVP)", milestone: "Lançamento oficial da plataforma e início da comercialização de licenças para autarquias e instituições.", color: "bg-[#FF8C42]" },
                   { month: "9", phase: "Full Feature Release", milestone: "Integração total do canal de especialistas com sistema de triagem inteligente e chat em tempo real.", color: "bg-brand-dark" },
-                  { month: "12", phase: "Escalabilidade", milestone: "Análise de dados do primeiro ano e expansão para parcerias com o Serviço Nacional de Saúde (SNS).", color: "bg-brand-teal" }
+                  { month: "12", phase: "Escalabilidade", milestone: "Análise de dados do primeiro ano e expansão para parcerias no ecossistema do SNS.", color: "bg-brand-teal" }
                 ].map((item, i) => (
                   <FadeIn key={i} delay={i * 0.15}>
                     <div className={`relative flex flex-col md:flex-row items-center justify-between mb-16 ${i % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
@@ -1701,7 +1775,7 @@ export default function App() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {[
                   { wp: "WP1", title: "Gestão de Projeto e Coordenação", objective: "Garantir execução eficiente, controlo de qualidade, gestão de risco, cumprimento de prazos e gestão financeira", deliverables: "D1.1 Plano de Gestão do Projeto, D1.2 Análise Financeira, D1.3 Relatório Final de Projeto", milestones: "M1 (Jun 2026): Estrutura de governação implementada, M2 (Ago 2026): Avaliação intermédia de execução, M3 (Out 2026): Conclusão formal do projeto", color: "bg-brand-pink" },
-                  { wp: "WP2", title: "Disseminação, Comunicação e Envolvimento", objective: "Garantir visibilidade, envolvimento de stakeholders e disseminação de resultados", deliverables: "D2.1 Plano de Comunicação e Disseminação, D2.2 Website do Projeto, D2.4 Kit de Comunicação", milestones: "M4 (Mai 2026): Estratégia de comunicação consolidada, M5 (Mar 2026): Website público ativo, M6 (Jun 2026): Rede de stakeholders estabelecida", color: "bg-brand-teal" },
+                  { wp: "WP2", title: "Disseminação, Comunicação e Envolvimento", objective: "Garantir visibilidade, envolvimento de stakeholders e disseminação de resultados", deliverables: "D2.1 Plano de Comunicação e Disseminação, D2.2 Website do Projeto, D2.3 Kit de Comunicação", milestones: "M4 (Mai 2026): Estratégia de comunicação consolidada, M5 (Mar 2026): Website público ativo, M6 (Jun 2026): Rede de stakeholders estabelecida", color: "bg-brand-teal" },
                   { wp: "WP3", title: "Sustentabilidade e Evidência Científica", objective: "Assegurar robustez científica e conformidade legal", deliverables: "D3.1 Relatório de Conformidade Legal e Proteção de Dados", milestones: "M7 (Mai 2026): Conformidade regulatória assegurada", color: "bg-brand-purple" },
                   { wp: "WP4", title: "Definição de Requisitos e Design", objective: "Levantar necessidades, definir requisitos e criar protótipos", deliverables: "D4.1 Documento de Análise Funcional, D4.2 Protótipo de Design (Alta Fidelidade), D4.3 Documento de Requisitos Técnicos, D4.4 Plano de Testes", milestones: "M8 (Mai 2026): Requisitos funcionais validados, M9 (Jun 2026): Arquitetura técnica aprovada", color: "bg-[#FF8C42]" },
                   { wp: "WP5", title: "Implementação e Desenvolvimento Tecnológico", objective: "Desenvolver e implementar a solução", deliverables: "D5.1 Plataforma Entre Nós (Versão Alpha)", milestones: "M10 (Jul 2026): Conclusão do desenvolvimento, M11 (Set 2026): Plataforma funcional em ambiente de staging", color: "bg-brand-dark" },
@@ -1763,11 +1837,11 @@ export default function App() {
                     </thead>
                     <tbody className="divide-y divide-gray-100">
                       {[
-                        { risk: "Privacidade e RGPD", impact: "Muito Alto", strategy: "Implementação de \"Privacy by Design\". Dados sensíveis são anonimizados e nunca vendidos a terceiros.", color: "text-red-500 bg-red-50" },
+                        { risk: "Risco de inconformidade legal (ex. RGPD) e de falha de garantia de privacidade", impact: "Muito Alto", strategy: "Implementação de \"Privacy by Design\". Dados sensíveis são anonimizados e nunca vendidos a terceiros.", color: "text-red-500 bg-red-50" },
                         { risk: "Desinformação no Fórum", impact: "Alto", strategy: "Sistema de moderação híbrido: IA bloqueia termos ofensivos instantaneamente; moderadores humanos validam contextos complexos.", color: "text-orange-500 bg-orange-50" },
                         { risk: "Responsabilidade Legal", impact: "Alto", strategy: "Termos de uso claros especificando que a plataforma é de apoio e literacia, não substituindo consultas médicas de emergência.", color: "text-orange-500 bg-orange-50" },
                         { risk: "Dependência de Financiamento", impact: "Médio", strategy: "Diversificação de fontes de receita (B2B, B2G e subsídios europeus) para evitar dependência de um único cliente.", color: "text-yellow-600 bg-yellow-50" },
-                        { risk: "Baixa Adoção Inicial", impact: "Médio", strategy: "Estratégia de marketing de influência com criadores de conteúdo que falem a linguagem dos jovens e parcerias com escolas.", color: "text-yellow-600 bg-yellow-50" }
+                        { risk: "Baixa Adoção Inicial", impact: "Médio", strategy: "Parcerias com criadores de conteúdo educativo alinhados com as necessidades das instituições que falem a linguagem dos jovens e parcerias com escolas.", color: "text-yellow-600 bg-yellow-50" }
                       ].map((row, i) => (
                         <tr key={i} className="hover:bg-brand-light/50 transition-colors">
                           <td className="p-6 font-bold text-brand-dark">{row.risk}</td>
@@ -1910,6 +1984,14 @@ export default function App() {
               </FadeIn>
             ))}
           </div>
+
+          <FadeIn delay={0.2}>
+            <div className="mt-12 bg-brand-teal/10 p-8 rounded-3xl border border-brand-teal/20 text-center max-w-4xl mx-auto">
+              <p className="text-lg text-brand-dark/80 font-medium leading-relaxed">
+                A equipa conta ainda com o apoio de um Conselho Consultivo de Saúde, composto por médicos e psicólogos, garantindo acompanhamento contínuo e alinhamento ético e clínico.
+              </p>
+            </div>
+          </FadeIn>
 
           <ChapterNavigation 
             prev={{ id: 'operacoes', name: 'Operações' }} 
