@@ -20,8 +20,8 @@ const nodes = [
   { id: '12', name: 'ChatGPT+', x: 70, y: 60, category: 'Assistentes Digitais', color: 'bg-[#E9608B]', size: 'text-xl font-black' },
 
   // Quadrante Inferior Direito (Baixa Credibilidade, Alta Interação)
-  { id: '13', name: 'TikTok+', x: 85, y: 30, category: 'Redes Sociais', color: 'bg-[#E9608B]', size: 'text-2xl font-black' },
-  { id: '14', name: 'Instagram', x: 65, y: 20, category: 'Redes Sociais', color: 'bg-[#E9608B]', size: 'text-lg font-bold' },
+  { id: '13', name: 'TikTok+', x: 85, y: 30, category: 'Redes Sociais', color: 'bg-[#281cb0]', size: 'text-2xl font-black' },
+  { id: '14', name: 'Instagram', x: 65, y: 20, category: 'Redes Sociais', color: 'bg-[#281cb0]', size: 'text-lg font-bold' },
   { id: '15', name: 'Reddit+', x: 80, y: 15, category: 'Comunidades', color: 'bg-[#F59E0B]', size: 'text-xl font-black' },
 ];
 
@@ -29,7 +29,7 @@ const categories = [
   { name: 'Plataformas Educativas', color: 'bg-[#3EB4B3]', textColor: 'text-[#3EB4B3]' },
   { name: 'Apps de Saúde', color: 'bg-[#735099]', textColor: 'text-[#735099]' },
   { name: 'Assistentes Digitais', color: 'bg-[#E9608B]', textColor: 'text-[#E9608B]' },
-  { name: 'Redes Sociais', color: 'bg-[#E9608B]', textColor: 'text-[#E9608B]' },
+  { name: 'Redes Sociais', color: 'bg-[#281cb0]', textColor: 'text-[#E9608B]' },
   { name: 'Comunidades', color: 'bg-[#F59E0B]', textColor: 'text-[#F59E0B]' },
 ];
 
