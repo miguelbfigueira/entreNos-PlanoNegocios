@@ -1952,7 +1952,7 @@ export default function App() {
               { 
                 name: "Sara Russo", 
                 role: "Requisitos de Utilizador e Testes de Usabilidade", 
-                desc: "Mestre em Engenharia Biomédica, com formação orientada para análise de sistemas, definição de requisitos e avaliação de soluções tecnológicas na área da saúde. No projeto, é responsável pela definição de requisitos de utilizador, planeamento e execução de testes de usabilidade e validação final da plataforma.", 
+                desc: "Mestre em Engenharia Biomédica, com formação orientada para interoperabilidade semântica, análise de requisitos de negócio na área da saúde. No projeto, é responsável pela definição de requisitos de utilizador, planeamento e execução de testes de usabilidade e validação final da plataforma.", 
                 color: "bg-brand-purple" 
               },
               { 
